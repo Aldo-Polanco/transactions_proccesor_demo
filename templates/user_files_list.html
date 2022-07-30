@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stori Card Resume!</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <style>
+    html {
+    display: block;
+    }
+    .navbar-brand {
+      overflow: hidden;
+      height: auto;
+    }
+
+    .navbar-brand img {
+      max-height: 90px;
+      padding: 15px;
+      width: auto;
+    }
+
+    #content-container {
+      margin-top: 180px;
+    }
+
+    h1, h3 {
+      color: #db4a05;
+      font-size: 3em;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      font-size: 2em;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .custom-appointment {
+      background-color: #e99060;
+      color: #FFF;
+      text-transform: uppercase;
+      font-size: 1em;
+      padding: 12px 25px 10px;
+    }
+    .custom-appointment:hover {
+      color: #FFF;
+      text-decoration: none;
+    }
+
+    .d-flex {
+      display: flex;
+    }
+
+    .space-between {
+      justify-content: space-between;
+    }
+
+    .mt-50 {
+      margin-top: 50px;
+    }
+  </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<!-- Bootstrap Navigation Bar -->
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <div class="navbar-brand logo-container hidden-xs">
+      <img class="logo img-responsive" src="http://mariachilabs.mx/files/logo-stori.svg" alt="MTR- New Covid test encounter" />
+    </div>
+  </div>
+  <div id="navbar" class="collapse navbar-collapse">
+    <ul class=" nav navbar-nav  navbar-action-link  navbar-right" ></ul>
+  </div>
+</div>
+
+<div id="content-container" class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 class="text-center">Your Stori's Card Transaction Files!</h1>
+      <div>
+        <p>Unproccesed transaction files:</p>
+
+        <form method="post" action="" enctype="multipart/form-data"
+                id="myform">
+    
+            <div >
+                <input type="file" id="file" name="file" />
+                <input type="button" class="button" value="Upload"
+                        id="but_upload">
+            </div>
+        </form>
+
+        <table class="table">
+            <thead>
+                <th>Filename</th>
+                <th>Process</th>
+            </thead>
+            <tbody id="table_body">
+
+            </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>
+<script src="{{url_for('static', filename = 'user_files_list.js')}}"></script>
+</body>
+</html>
