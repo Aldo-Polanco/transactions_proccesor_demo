@@ -7,12 +7,12 @@ from config.generic_config import generic_config
 
 class EmailSender():
 
-    def __init__(self, sender, receiver, subject):
+    def __init__(self, sender, receiver, smpt_server, subject):
         self.msg = MIMEMultipart('alternative')
         self.msg['Subject'] = subject
         self.msg['From'] = sender
         self.msg['To'] = receiver
-        self.server = smtplib.SMTP('smtp.zoho.com', 587)
+        self.server = smtplib.SMTP(smpt_server, 587)
 
     def create_email_content(self, html_template, plain_text = 'Hello from Stori Card'):
         part1 = MIMEText(plain_text, 'plain') 

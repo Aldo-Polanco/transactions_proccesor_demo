@@ -28,6 +28,7 @@ Before anything make sure that you have already set this env variables before ru
     $ export APP_SECRET="miaw"
     $ export SENDER_EMAIL="aldo.polanco@zohomail.com"
     $ export SENDER_EMAIL_PASS="your_password"
+    $ export SMTP_SERVER="smtp.zoho.com"
 
 ==============
 ## How to Run

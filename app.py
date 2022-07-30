@@ -76,7 +76,7 @@ def proccess_user_file(logged_user, file_name):
     html_template = render_template('transaction_email.html', user_name = logged_user['user_name'] ,**csv_proccesor.transaction_info)
     csv_proccesor.save_transactions_to_db(dao, logged_user['uid'], file_name)
     try:
-        email_sender = EmailSender(generic_config['sender_email'],logged_user['user_email'],'Stori Card Transactions Resume!')
+        email_sender = EmailSender(generic_config['sender_email'],logged_user['user_email'],generic_config['smtp_server'],'Stori Card Transactions Resume!')
         email_sender.create_email_content(html_template)
         email_sender.send_email()
     except Exception as e:

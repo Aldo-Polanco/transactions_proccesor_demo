@@ -5,5 +5,6 @@ generic_config = {
     'sender_email' : os.getenv('SENDER_EMAIL'),
     'sender_email_password' : os.getenv('SENDER_EMAIL_PASS'),
     'db_name' : os.getenv('DB_NAME'),
-    'app_secret': os.getenv('APP_SECRET')
+    'app_secret': os.getenv('APP_SECRET'),
+    'smtp_server': os.getenv('SMTP_SERVER')
 }
