@@ -1,5 +1,5 @@
 ==============
-# Stori's Card Transaction Account Manager Demo
+# Transaction Account Manager Demo
 ==============
 
 This app let you upload your transaction files to the app to be proccesed and send you a resume to your email.
@@ -24,7 +24,7 @@ Before anything make sure that you have already set this env variables before ru
 
     $ export DB_USERNAME="postgres" \
     $ export DB_PASSWORD="123456" \
-    $ export DB_NAME="stori_card_demo" \
+    $ export DB_NAME="demo" \
     $ export APP_SECRET="miaw" \
     $ export SENDER_EMAIL="aldo.polanco@zohomail.com" \
     $ export SENDER_EMAIL_PASS="your_password" \
